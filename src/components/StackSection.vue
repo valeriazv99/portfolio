@@ -28,12 +28,6 @@ import { stack } from "../data/stack.js";
   padding: 96px 0;
 }
 
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 .groups {
   margin-top: 36px;
   display: flex;

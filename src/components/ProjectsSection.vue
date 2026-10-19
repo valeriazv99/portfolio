@@ -40,12 +40,6 @@ const others = projects.filter((project) => !project.featured);
   padding: 96px 0;
 }
 
-.container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 .intro {
   margin: 0 0 48px;
   max-width: 600px;
