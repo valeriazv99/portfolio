@@ -14,7 +14,9 @@ import CodeCard from "./CodeCard.vue";
       </p>
       <div class="hero-actions">
         <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-        <a href="/cv.pdf" class="btn btn-secondary" download>Descargar CV</a>
+        <a href="/ValeriaZavaleta_CV.pdf" class="btn btn-secondary" download
+          >Descargar CV</a
+        >
       </div>
     </div>
     <div class="hero-visual">

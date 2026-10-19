@@ -1,7 +1,7 @@
 <script setup>
 import RoundFlower from "./RoundFlower.vue";
 
-const stack = ["Vue", "Node", "Laravel"];
+const stack = ["JavaScript", "Vue", "Node", "Laravel"];
 </script>
 
 <template>
@@ -12,7 +12,7 @@ const stack = ["Vue", "Node", "Laravel"];
       </div>
       <pre class="code"><code><span class="kw">const</span> valeria = {
   rol: <span class="str">'Desarrolladora web junior'</span>,
-  stack: [<template v-for="(tech, i) in stack" :key="tech"><span class="str">'{{ tech }}'</span><template v-if="i < stack.length - 1">, </template></template>],
+  stack: [<template v-for="tech in stack" :key="tech">{{ "\n    " }}<span class="str">'{{ tech }}'</span>,</template>{{ "\n  " }}],
   ubicacion: <span class="str">'Barcelona'</span>,
   buscando: <span class="str">'mi primera oportunidad'</span>
 };</code></pre>
@@ -91,5 +91,15 @@ const stack = ["Vue", "Node", "Laravel"];
 }
 .str {
   color: var(--color-lavender);
+}
+
+@media (max-width: 600px) {
+  .flower-big {
+    right: -12px;
+  }
+
+  .flower-small {
+    left: -12px;
+  }
 }
 </style>
