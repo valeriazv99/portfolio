@@ -30,4 +30,36 @@ export const projects = [
     repo: "https://github.com/valeriazv99/sala-onirica-tickets",
     featured: true,
   },
+  {
+    id: "the-lost-word",
+    title: "The Lost Word",
+    label: "Equipo de 5",
+    description:
+      "Juego multijugador de mecanografía en tiempo real: escribe rápido y con precisión para sobrevivir.",
+    tech: ["Vue 3", "Node.js", "Express", "Socket.IO", "MySQL"],
+    repo: "https://github.com/valeriazv99/the-lost-word-game",
+    featured: false,
+  },
+  {
+    id: "autoescola-quiz",
+    title: "Autoescola Quiz",
+    label: "Primer proyecto individual",
+    description:
+      "Web para practicar el examen teórico de conducir, con contrarreloj y panel de administración.",
+    tech: ["JavaScript", "PHP", "MySQL"],
+    repo: "https://github.com/valeriazv99/autoescola-quiz",
+    featured: false,
+  },
+  {
+    id: "clawd-mochi",
+    title: "Clawd Mochi",
+    label: "En construcción",
+    description:
+      "La mascota mochi de Claude Code, viva en tu escritorio. Mi proyecto personal.",
+    tech: [],
+    repo: "https://github.com/valeriazv99/clawd-mochi-desk-pet",
+    featured: false,
+    wip: true,
+    linkText: "Seguir el progreso →",
+  },
 ];

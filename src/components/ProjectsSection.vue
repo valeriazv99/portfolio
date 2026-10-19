@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard.vue";
 import { projects } from "../data/projects.js";
 
 const featured = projects.filter((project) => project.featured);
+const others = projects.filter((project) => !project.featured);
 </script>
 
 <template>
@@ -19,6 +20,14 @@ const featured = projects.filter((project) => project.featured);
           v-for="project in featured"
           :key="project.id"
           :project="project"
+        />
+      </div>
+      <div class="others">
+        <ProjectCard
+          v-for="project in others"
+          :key="project.id"
+          :project="project"
+          compact
         />
       </div>
     </div>
@@ -47,5 +56,12 @@ const featured = projects.filter((project) => project.featured);
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+}
+
+.others {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 </style>

@@ -4,12 +4,21 @@ defineProps({
     type: Object,
     required: true,
   },
+  compact: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
 <template>
-  <article class="card">
-    <div class="card-image">[Captura de {{ project.title }}]</div>
+  <article
+    class="card"
+    :class="{ 'card--compact': compact, 'card--wip': project.wip }"
+  >
+    <div v-if="!compact" class="card-image">
+      [Captura de {{ project.title }}]
+    </div>
     <div class="card-body">
       <p class="card-label">{{ project.label }}</p>
       <h3 class="card-title">{{ project.title }}</h3>
@@ -17,13 +26,13 @@ defineProps({
       <p v-if="project.role" class="card-text">
         <strong>Mi papel:</strong> {{ project.role }}
       </p>
-      <ul class="card-tech">
+      <ul v-if="project.tech.length" class="card-tech">
         <li v-for="tech in project.tech" :key="tech" class="chip">
           {{ tech }}
         </li>
       </ul>
       <a :href="project.repo" class="card-link" target="_blank" rel="noopener">
-        Ver código en GitHub →
+        {{ project.linkText ?? "Ver código en GitHub →" }}
       </a>
     </div>
   </article>
@@ -104,5 +113,31 @@ defineProps({
 
 .card-link:hover {
   color: var(--color-primary-dark);
+}
+
+.card--compact {
+  flex: 1 1 300px;
+  border-radius: 20px;
+}
+
+.card--compact .card-body {
+  padding: 28px;
+  gap: 10px;
+}
+
+.card--compact .card-label {
+  font-size: 13px;
+}
+
+.card--compact .card-title {
+  font-size: 24px;
+}
+
+.card--compact .card-text {
+  font-size: 16px;
+}
+
+.card--wip {
+  border: 2px dashed var(--color-lavender);
 }
 </style>
