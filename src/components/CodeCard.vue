@@ -81,7 +81,7 @@ const stack = ["Vue", "Node", "Laravel"];
 .code {
   margin: 0;
   font-family: var(--font-code);
-  font-size: 15px;
+  font-size: clamp(12px, 3.3vw, 15px);
   line-height: 1.8;
   white-space: pre-wrap;
 }

@@ -82,4 +82,11 @@ import CodeCard from "./CodeCard.vue";
   flex: 1 1 380px;
   min-width: 0;
 }
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+}
 </style>

@@ -9,14 +9,18 @@ const links = [
 <template>
   <header class="nav-header">
     <nav class="nav" aria-label="Principal">
-      <a href="#inicio" class="logo">valeria<span>.dev</span></a>
+      <a href="#inicio" class="logo"
+        ><span>&lt;</span>valeria<span> /&gt;</span></a
+      >
 
       <ul class="nav-links">
         <li v-for="link in links" :key="link.href">
           <a :href="link.href">{{ link.label }}</a>
         </li>
-        <li>
-          <a href="/cv.pdf" class="btn-cv" download>Descargar CV</a>
+        <li class="nav-cv">
+          <a href="/ValeriaZavaleta_CV.pdf" class="btn-cv" download
+            >Descargar CV</a
+          >
         </li>
       </ul>
     </nav>
@@ -82,5 +86,15 @@ const links = [
 .nav-links .btn-cv:hover {
   background: var(--color-primary-dark);
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .nav-cv {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 4px 18px;
+  }
 }
 </style>
