@@ -1,3 +1,7 @@
+<script setup>
+import CodeCard from "./CodeCard.vue";
+</script>
+
 <template>
   <section id="inicio" class="hero">
     <div class="hero-text">
@@ -12,6 +16,9 @@
         <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
         <a href="/cv.pdf" class="btn btn-secondary" download>Descargar CV</a>
       </div>
+    </div>
+    <div class="hero-visual">
+      <CodeCard />
     </div>
   </section>
 </template>
@@ -69,5 +76,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.hero-visual {
+  flex: 1 1 380px;
+  min-width: 0;
 }
 </style>
