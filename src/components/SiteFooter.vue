@@ -6,7 +6,7 @@ const year = new Date().getFullYear();
   <footer class="footer">
     <div class="footer-inner">
       <span>© {{ year }} Valeria Zavaleta</span>
-      <span class="footer-tech">Hecha con Vue 3 + Vite</span>
+      <span class="footer-tech">Hecho con Vue 3 + Vite</span>
     </div>
   </footer>
 </template>

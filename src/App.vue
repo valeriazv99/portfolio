@@ -5,6 +5,7 @@ import ProjectsSection from "./components/ProjectsSection.vue";
 import AboutSection from "./components/AboutSection.vue";
 import StackSection from "./components/StackSection.vue";
 import ContactSection from "./components/ContactSection.vue";
+import SiteFooter from "./components/SiteFooter.vue";
 </script>
 
 <template>

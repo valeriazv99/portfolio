@@ -1,22 +1,53 @@
 <script setup>
+import RoundFlower from "./RoundFlower.vue";
+
 const stack = ["Vue", "Node", "Laravel"];
 </script>
 
 <template>
-  <div class="code-card">
-    <div class="dots" aria-hidden="true">
-      <span></span><span></span><span></span>
-    </div>
-    <pre class="code"><code><span class="kw">const</span> valeria = {
+  <div class="code-wrap">
+    <div class="code-card">
+      <div class="dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <pre class="code"><code><span class="kw">const</span> valeria = {
   rol: <span class="str">'Desarrolladora web junior'</span>,
   stack: [<template v-for="(tech, i) in stack" :key="tech"><span class="str">'{{ tech }}'</span><template v-if="i < stack.length - 1">, </template></template>],
   ubicacion: <span class="str">'Barcelona'</span>,
   buscando: <span class="str">'mi primera oportunidad'</span>
 };</code></pre>
+    </div>
+    <RoundFlower class="flower flower-big" :size="120" />
+    <RoundFlower
+      class="flower flower-small"
+      :size="64"
+      petal="#CDB8EE"
+      center="#F4B6D2"
+    />
   </div>
 </template>
 
 <style scoped>
+.code-wrap {
+  position: relative;
+}
+
+.flower {
+  position: absolute;
+  pointer-events: none;
+}
+
+.flower-big {
+  right: -28px;
+  bottom: -44px;
+}
+
+.flower-small {
+  left: -24px;
+  top: -28px;
+  transform: rotate(-15deg);
+}
+
 .code-card {
   background: var(--color-ink);
   color: #ede3fa;
