@@ -1,7 +1,7 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+<script setup></script>
 
 <template>
-  <HelloWorld />
+  <main>
+    <h1>Valeria Zavaleta</h1>
+  </main>
 </template>
