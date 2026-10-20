@@ -94,8 +94,13 @@ const stack = ["JavaScript", "Vue", "Node", "Laravel"];
 }
 
 @media (max-width: 600px) {
+  /* En móvil el texto ocupa todo el ancho: la flor se encoge y baja
+     para quedar en la esquina, fuera de las líneas de código */
   .flower-big {
-    right: -12px;
+    right: -10px;
+    bottom: -52px;
+    transform: scale(0.7);
+    transform-origin: bottom right;
   }
 
   .flower-small {

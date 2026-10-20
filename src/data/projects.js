@@ -8,6 +8,12 @@ export const projects = [
     role: "La idea fue mía, propuse el stack y coordiné al equipo.",
     tech: ["React", "NestJS", "Jira", "OpenSpec"],
     repo: "https://github.com/valeriazv99/lightweight-fitness",
+    images: [
+      "/projects/lightweight-login.webp",
+      "/projects/lightweight-dashboard.webp",
+      "/projects/lightweight-rutina.webp",
+      "/projects/lightweight-progreso.webp",
+    ],
     featured: true,
   },
   {

@@ -1,5 +1,7 @@
 <script setup>
-defineProps({
+import { ref, onMounted, onBeforeUnmount } from "vue";
+
+const props = defineProps({
   project: {
     type: Object,
     required: true,
@@ -9,6 +11,32 @@ defineProps({
     default: false,
   },
 });
+
+// Slider: si el proyecto tiene varias capturas, cambian solas cada 4 s
+const images = props.project.images ?? [];
+const current = ref(0);
+let timer = null;
+
+function next() {
+  current.value = (current.value + 1) % images.length;
+}
+
+function start() {
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  if (images.length > 1 && !reduceMotion && !timer) {
+    timer = setInterval(next, 4000);
+  }
+}
+
+function stop() {
+  clearInterval(timer);
+  timer = null;
+}
+
+onMounted(start);
+onBeforeUnmount(stop);
 </script>
 
 <template>
@@ -16,8 +44,32 @@ defineProps({
     class="card"
     :class="{ 'card--compact': compact, 'card--wip': project.wip }"
   >
-    <div v-if="!compact" class="card-image">
-      [Captura de {{ project.title }}]
+    <div
+      v-if="!compact"
+      class="card-image"
+      @mouseenter="stop"
+      @mouseleave="start"
+    >
+      <template v-if="images.length">
+        <img
+          v-for="(src, i) in images"
+          :key="src"
+          :src="src"
+          :alt="`Captura ${i + 1} de ${project.title}`"
+          :class="{ active: i === current }"
+          :loading="i === 0 ? 'eager' : 'lazy'"
+        />
+        <div v-if="images.length > 1" class="dots">
+          <button
+            v-for="(src, i) in images"
+            :key="src"
+            :class="{ active: i === current }"
+            :aria-label="`Ver captura ${i + 1}`"
+            @click="current = i"
+          ></button>
+        </div>
+      </template>
+      <template v-else>{{ project.title }}</template>
     </div>
     <div class="card-body">
       <p class="card-label">{{ project.label }}</p>
@@ -56,9 +108,54 @@ defineProps({
   align-items: center;
   justify-content: center;
   background: #e9ddfb;
-  color: var(--color-muted);
-  font-family: var(--font-code);
-  font-size: 15px;
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Todas las capturas apiladas; solo la activa es visible */
+.card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.card-image img.active {
+  opacity: 1;
+}
+
+.dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(30, 20, 45, 0.55);
+}
+
+.dots button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.dots button.active {
+  background: var(--color-lavender);
 }
 
 .card-body {
