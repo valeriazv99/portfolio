@@ -28,15 +28,16 @@ import { stack } from "../data/stack.js";
   padding: 96px 0;
 }
 
+/* Cuadrícula: 2 columnas si caben (420px mínimo cada una), si no 1.
+   Con 4 grupos queda un 2x2 equilibrado en escritorio */
 .groups {
   margin-top: 36px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
   gap: 24px;
 }
 
 .group {
-  flex: 1 1 300px;
   min-width: 0;
   background: #fff;
   border: 1px solid var(--color-border);
