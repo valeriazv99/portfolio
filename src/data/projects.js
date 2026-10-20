@@ -68,8 +68,8 @@ export const projects = [
     title: "Clawd Mochi",
     label: "En construcción",
     description:
-      "La mascota mochi de Claude Code, viva en tu escritorio. Mi proyecto personal.",
-    tech: [],
+      "Mascota física de escritorio inspirada en Clawd, de Claude Code: pantalla táctil con animaciones, reloj y el tiempo. Mi versión de un proyecto open source, con carcasa impresa en 3D.",
+    tech: ["ESP32", "C++ (Arduino)", "Impresión 3D"],
     repo: "https://github.com/valeriazv99/clawd-mochi-desk-pet",
     featured: false,
     wip: true,
