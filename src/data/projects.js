@@ -34,6 +34,13 @@ export const projects = [
       "Docker",
     ],
     repo: "https://github.com/valeriazv99/sala-onirica-tickets",
+    images: [
+      "/projects/sala-onirica-cartelera.webp",
+      "/projects/sala-onirica-asientos.webp",
+      "/projects/sala-onirica-compra.webp",
+      "/projects/sala-onirica-dashboard.webp",
+      "/projects/sala-onirica-admin.webp",
+    ],
     featured: true,
   },
   {
