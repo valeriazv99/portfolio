@@ -5,8 +5,8 @@ export const projects = [
     label: "Landing en Webflow · Proyecto personal",
     description:
       "Proyecto de práctica para aprender Webflow: la landing de una marca de diseño web para negocios locales, orientada a conversión. Todo lleva al formulario de presupuesto.",
-    role: "Diseño y maquetación completos: variables de color, clases reutilizables, responsive y formulario funcional.",
-    tech: ["Webflow", "Responsive", "Diseño UI"],
+    role: "Diseño y maquetación completos en Webflow. Definí un sistema de diseño con variables de color y clases reutilizables (incluidas combo classes), estructuré la página con HTML semántico y una jerarquía de encabezados correcta, y la adapté a escritorio, tablet y móvil con breakpoints. El formulario de contacto valida los campos, envía notificaciones por email y tiene estados de éxito y error personalizados. También configuré el SEO básico: título y meta descripción.",
+    tech: ["Webflow", "Diseño UI", "Responsive", "HTML semántico", "SEO"],
     url: "https://valia-web.webflow.io",
     images: [
       "/projects/valia-hero.webp",
@@ -52,8 +52,8 @@ export const projects = [
     title: "Sala Onírica",
     label: "Proyecto individual · Ciclo DAW",
     description:
-      "Plataforma de venta de entradas con selección de asientos en tiempo real. Si dos personas pulsan el mismo asiento a la vez, solo una se lo queda: nunca se vende dos veces.",
-    role: "Todo, de principio a fin: requisitos, arquitectura, frontend, dos backends, tests e infraestructura.",
+      "Plataforma de venta de entradas con selección de asientos en tiempo real mediante WebSockets. Las reservas se gestionan con transacciones y bloqueo pesimista en base de datos, lo que evita la doble venta ante accesos concurrentes, y los asientos retenidos se liberan automáticamente al expirar el tiempo de reserva.",
+    role: "Desarrollo completo en solitario: análisis de requisitos, arquitectura, frontend, dos backends, testing e infraestructura.",
     tech: [
       "Nuxt 3",
       "Vue 3",
@@ -79,7 +79,7 @@ export const projects = [
     title: "The Lost Word",
     label: "Proyecto grupal · Ciclo DAW",
     description:
-      "Juego multijugador de mecanografía en tiempo real: escribe rápido y con precisión para sobrevivir.",
+      "Juego multijugador de mecanografía en tiempo real sobre WebSockets: salas con idioma y dificultad configurables, progreso de cada jugador sincronizado en directo y eliminación periódica del último clasificado. Al terminar, muestra una clasificación con palabras por minuto, precisión y errores.",
     tech: ["Vue 3", "Tailwind CSS", "Node.js", "Express", "Socket.IO", "MySQL"],
     role: "Diseñé e implementé la interfaz de todas las pantallas con Tailwind CSS, incluidos los efectos visuales y las animaciones. En el backend desarrollé el sistema de salas múltiples con Socket.IO y la sincronización del temporizador entre servidor y cliente.",
     repo: "https://github.com/valeriazv99/the-lost-word-game",

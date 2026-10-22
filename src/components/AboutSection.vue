@@ -11,12 +11,15 @@
         necesita la persona que tengo delante.
       </p>
       <p>
-        Ahora lo aplico a lo que de verdad me gusta: construir webs. En el ciclo
-        he trabajado tanto en front como en back, y en mi proyecto final propuse
-        la idea y el stack, y coordiné al equipo.
+        Ahora lo aplico a lo que de verdad me gusta: construir webs. Me muevo
+        entre front y back, pero donde más disfruto es en la interfaz: cuidar
+        los detalles para que quien la use no tenga que pensar. Y cuando un
+        proyecto pide una herramienta nueva, me pongo a aprenderla.
       </p>
       <p>
         Busco un equipo donde seguir aprendiendo y aportar desde el primer día.
+        Estoy en Barcelona, con disponibilidad para empezar ya, en remoto,
+        híbrido o presencial.
       </p>
     </div>
   </section>
