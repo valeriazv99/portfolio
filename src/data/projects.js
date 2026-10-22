@@ -2,23 +2,42 @@ export const projects = [
   {
     id: "valia",
     title: "Valia",
-    label: "Landing en Webflow · proyecto propio",
+    label: "Landing en Webflow · Proyecto personal",
     description:
-      "Mi marca freelance de diseño web para negocios locales. Una landing orientada a conversión: todo lleva al formulario de presupuesto.",
+      "Proyecto de práctica para aprender Webflow: la landing de una marca de diseño web para negocios locales, orientada a conversión. Todo lleva al formulario de presupuesto.",
     role: "Diseño y maquetación completos: variables de color, clases reutilizables, responsive y formulario funcional.",
     tech: ["Webflow", "Responsive", "Diseño UI"],
     url: "https://valia-web.webflow.io",
+    images: [
+      "/projects/valia-hero.webp",
+      "/projects/valia-servicios.webp",
+      "/projects/valia-contacto.webp",
+    ],
     featured: true,
     linkText: "Ver la web en vivo →",
   },
   {
     id: "lightweight",
     title: "LightWeight",
-    label: "Proyecto final · equipo de 4",
+    label: "Proyecto grupal final · Ciclo DAW",
     description:
       "Plataforma web de fitness y coaching: rutinas, entrenamientos guiados y comunicación entre entrenador y cliente.",
-    role: "La idea fue mía, propuse el stack y coordiné al equipo.",
-    tech: ["React", "NestJS", "Jira", "OpenSpec"],
+    role: "Propuse el concepto, definí el stack y coordiné al equipo. Además trabajé como full stack: modelado de la base de datos y migraciones con Prisma, autenticación con JWT, sistema de invitaciones y notificaciones, chat y videollamadas en tiempo real con WebRTC y Socket.IO, interfaz multiidioma con i18n, despliegue continuo con Docker y la estrategia de testing con Vitest y Playwright.",
+    tech: [
+      "React",
+      "NestJS",
+      "PostgreSQL",
+      "Prisma",
+      "i18next",
+      "JWT",
+      "Socket.IO",
+      "WebRTC",
+      "Docker",
+      "Vitest",
+      "Playwright",
+      "Jira",
+      "OpenSpec",
+    ],
     repo: "https://github.com/valeriazv99/lightweight-fitness",
     images: [
       "/projects/lightweight-login.webp",
@@ -31,7 +50,7 @@ export const projects = [
   {
     id: "sala-onirica",
     title: "Sala Onírica",
-    label: "Proyecto individual",
+    label: "Proyecto individual · Ciclo DAW",
     description:
       "Plataforma de venta de entradas con selección de asientos en tiempo real. Si dos personas pulsan el mismo asiento a la vez, solo una se lo queda: nunca se vende dos veces.",
     role: "Todo, de principio a fin: requisitos, arquitectura, frontend, dos backends, tests e infraestructura.",
@@ -58,33 +77,18 @@ export const projects = [
   {
     id: "the-lost-word",
     title: "The Lost Word",
-    label: "Equipo de 5",
+    label: "Proyecto grupal · Ciclo DAW",
     description:
       "Juego multijugador de mecanografía en tiempo real: escribe rápido y con precisión para sobrevivir.",
-    tech: ["Vue 3", "Node.js", "Express", "Socket.IO", "MySQL"],
+    tech: ["Vue 3", "Tailwind CSS", "Node.js", "Express", "Socket.IO", "MySQL"],
+    role: "Diseñé e implementé la interfaz de todas las pantallas con Tailwind CSS, incluidos los efectos visuales y las animaciones. En el backend desarrollé el sistema de salas múltiples con Socket.IO y la sincronización del temporizador entre servidor y cliente.",
     repo: "https://github.com/valeriazv99/the-lost-word-game",
-    featured: false,
-  },
-  {
-    id: "autoescola-quiz",
-    title: "Autoescola Quiz",
-    label: "Primer proyecto individual",
-    description:
-      "Web para practicar el examen teórico de conducir, con contrarreloj y panel de administración.",
-    tech: ["JavaScript", "PHP", "MySQL"],
-    repo: "https://github.com/valeriazv99/autoescola-quiz",
-    featured: false,
-  },
-  {
-    id: "clawd-mochi",
-    title: "Clawd Mochi",
-    label: "En construcción",
-    description:
-      "Mascota física de escritorio inspirada en Clawd, de Claude Code: pantalla táctil con animaciones, reloj y el tiempo. Mi versión de un proyecto open source, con carcasa impresa en 3D.",
-    tech: ["ESP32", "C++ (Arduino)", "Impresión 3D"],
-    repo: "https://github.com/valeriazv99/clawd-mochi-desk-pet",
-    featured: false,
-    wip: true,
-    linkText: "Seguir el progreso →",
+    images: [
+      "/projects/the-lost-word-partida.webp",
+      "/projects/the-lost-word-lapides.webp",
+      "/projects/the-lost-word-espera.webp",
+      "/projects/the-lost-word-ranking.webp",
+    ],
+    featured: true,
   },
 ];
