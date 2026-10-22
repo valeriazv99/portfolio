@@ -84,9 +84,9 @@ export const projects = [
     role: "Diseñé e implementé la interfaz de todas las pantallas con Tailwind CSS, incluidos los efectos visuales y las animaciones. En el backend desarrollé el sistema de salas múltiples con Socket.IO y la sincronización del temporizador entre servidor y cliente.",
     repo: "https://github.com/valeriazv99/the-lost-word-game",
     images: [
-      "/projects/the-lost-word-partida.webp",
       "/projects/the-lost-word-lapides.webp",
       "/projects/the-lost-word-espera.webp",
+      "/projects/the-lost-word-partida.webp",
       "/projects/the-lost-word-ranking.webp",
     ],
     featured: true,
