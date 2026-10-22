@@ -12,7 +12,7 @@ const others = projects.filter((project) => !project.featured);
       <p class="section-kicker">01 · proyectos</p>
       <h2 class="section-title">Lo que he construido</h2>
       <p class="intro">
-        Proyectos del ciclo DAW. El código de todos está en mi GitHub.
+        Proyectos del ciclo DAW y propios. El código de todos está en mi GitHub.
       </p>
 
       <div class="featured">

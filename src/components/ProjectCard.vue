@@ -83,7 +83,12 @@ onBeforeUnmount(stop);
           {{ tech }}
         </li>
       </ul>
-      <a :href="project.repo" class="card-link" target="_blank" rel="noopener">
+      <a
+        :href="project.url ?? project.repo"
+        class="card-link"
+        target="_blank"
+        rel="noopener"
+      >
         {{ project.linkText ?? "Ver código en GitHub →" }}
       </a>
     </div>

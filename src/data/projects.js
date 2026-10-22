@@ -1,5 +1,17 @@
 export const projects = [
   {
+    id: "valia",
+    title: "Valia",
+    label: "Landing en Webflow · proyecto propio",
+    description:
+      "Mi marca freelance de diseño web para negocios locales. Una landing orientada a conversión: todo lleva al formulario de presupuesto.",
+    role: "Diseño y maquetación completos: variables de color, clases reutilizables, responsive y formulario funcional.",
+    tech: ["Webflow", "Responsive", "Diseño UI"],
+    url: "https://valia-web.webflow.io",
+    featured: true,
+    linkText: "Ver la web en vivo →",
+  },
+  {
     id: "lightweight",
     title: "LightWeight",
     label: "Proyecto final · equipo de 4",
